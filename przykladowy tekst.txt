@@ -1,0 +1,4 @@
+"""Przykłądowy tekst  (415)-555-4242 ext 44 zawierający numery
+422 111 4545 telefonów example@domain.com.pl
+oraz adresy mail przyk_lad-owy@mail.com. Wystraczy skopiować."""
+
