@@ -6,12 +6,10 @@ import re
 
 example_text = open("./madLibs.txt")
 read_text = example_text.read()
-print(read_text)    # line for test
+print(read_text)
 print("\n")
 find_word = re.compile(r"NOUN|VERB|ADJECTIVE|ADVERB")
 results_list = find_word.findall(read_text)
-print(results_list)     # line for test
-print("\n")
 
 # Addition new key word and change it in text
 new_word = {}
@@ -36,10 +34,12 @@ for i in range(len(results_list)):
         new_word["adjective{0}".format(num_adj)] = input("Podaj przymiotnik: \n")
         read_text = read_text.replace(results_list[i], new_word["adjective{0}".format(num_adj)], 1)
         num_adj += 1
-print(new_word)     # line for test
-print("\n")
-print(read_text)    # line for test
-print("\n")
 
-# TODO: Zapisanie tekstu w nowym pliku
+print(read_text)
+print("\n")
 example_text.close()
+
+# Save new text in new file
+edited = open("editedMadLibs.txt", "w")
+edited.write(read_text)
+edited.close()
